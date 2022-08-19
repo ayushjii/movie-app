@@ -13,7 +13,7 @@ export const Navbar = () => {
           <MdLocalMovies />
         </div>
 
-        <Link href="/">ENTERTAINMENT SHOW</Link>
+        <Link href="/home">ENTERTAINMENT SHOW</Link>
         <div className="flex">
           {" "}
           <MdLocalMovies />

@@ -4,8 +4,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Showexpand = (props) => {
   return (
-    <div className="z-50 fixed pooh w-full bar h-full max-h-screen overflow-auto p-3 backdrop-blur">
-      <div className="relative flex justify-center min-h-ad pooh overflow-hidden my-3 mx-auto w-full max-w-3xl bg-white rounded-3xl shadow-xl sm:flex-col ">
+    <div className="z-50 fixed w-full bar h-full max-h-screen overflow-auto p-3 backdrop-blur">
+      <div className="relative flex justify-center min-h-ad overflow-hidden my-3 mx-auto w-full max-w-3xl bg-white rounded-3xl shadow-xl sm:flex-col ">
         <i
           className="cursor-pointer py-4 px-5 m-auto top-4 right-4 absolute z-10 hover:text-red-500"
           onClick={props.closePop}
