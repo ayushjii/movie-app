@@ -5,9 +5,6 @@ import React from "react";
 import axios from "axios";
 import {FcFilmReel,FcFilm } from 'react-icons/fc';
 
-
-// https://via.placeholder.com/210x295/111217/FFFFFF/?text=No%20Image
-
 class Main extends React.Component {
     state = {
       tvload: [],
@@ -17,7 +14,7 @@ class Main extends React.Component {
           language: 'Language',
           genres: [],
           image: {
-            original: ''
+            original: 'https://bitsofco.de/content/images/2018/12/broken-1.png'
           },
           network: {
             name: 'Network',
@@ -77,7 +74,7 @@ class Main extends React.Component {
                         key={title.show.id} 
                         id={title.show.id} 
                         showClicked={this.getClick}
-                        imgLink={title.show.image === null ? '' : title.show.image.medium}
+                        imgLink={title.show.image === null ? 'https://bitsofco.de/content/images/2018/12/broken-1.png' : title.show.image.medium}
                         />);
       });
       
@@ -115,7 +112,7 @@ class Main extends React.Component {
             name={allmove.name}
             imgLink={
               allmove.image == null ?
-              '' : 
+              'https://bitsofco.de/content/images/2018/12/broken-1.png' : 
               allmove.image.original
             }
             country={allmove.network == null ?
@@ -139,7 +136,7 @@ class Main extends React.Component {
             sendEnter={this.fetchShows}
             />
           <div className="grid gap-3 p-3 pb-12 show-grid">
-            { allShows.length === 0 ? <div className='error flex'><div><FcFilm size={30}/></div>No Show Found<div><FcFilmReel size={30}/></div></div> : allShows }
+            { allShows.length === 0 ? <div className='error flex font-bold'><div><FcFilm size={30}/></div>No Show Found<div><FcFilmReel size={30}/></div></div> : allShows }
           </div>
         </div>
       )

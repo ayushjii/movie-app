@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #000;
-  background-image: linear-gradient(to right, #fff, );
+  background-color: #e4e3f5;
+
   margin: 0;
   padding: 0;
 }
@@ -26,31 +26,29 @@ body {
 .show-grid {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-auto-rows: minmax(min-content, max-content);
-  height: calc(100% - 100px); 
+  height: calc(100% - 100px);
   overflow-y: auto;
   scrollbar-color: red transparent;
-  scrollbar-width:thin;
+  scrollbar-width: thin;
 }
 
-
 .error {
-  /* grid-column: 1/-1; */
   text-align: center;
   font-size: 24px;
   animation: poof 0.5s;
-  color: #fff;
+  color: #0f0f0f;
 }
-  .bar::-webkit-scrollbar-thumb {
-    background-color: #0f0f0f;
-  }
+.bar::-webkit-scrollbar-thumb {
+  background-color: #0f0f0f;
+}
 .bar::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-    background-color: transparent;
-  }
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
 .bar::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
+  background-color: transparent;
+}
 
 @keyframes poof {
   0% {
