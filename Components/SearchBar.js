@@ -1,3 +1,7 @@
+import {FcSearch} from 'react-icons/fc'
+
+
+
 const Search = (props) => {
 
     let sendValue = (e) => {
@@ -15,10 +19,10 @@ const Search = (props) => {
       }
     }
     return(
-        <div className='h-24 flex flex-col'>
-          <div className='flex'>
-            <input className="border appearance-none outline-0 h-10 bg-white px-0 py-2 max-w-sm" type='text' onChange={sendValue} onKeyDown={handleKeyDown} placeholder='Enter word...' />
-            <button className="border appearance-none outline-0 h-10 bg-white px-0 py-2 cursor-pointer" onClick={handleSubmit} ><i className="fas fa-search"></i></button>
+        <div className='h-24 grid place-content-center'>
+          <div className='flex transition'>
+            <input className="rounded-l-md appearance-none outline-0 border h-10 bg-white py-0 px-3 min-w-ad focus:shadow-lg" type='text' onChange={sendValue} onKeyDown={handleKeyDown} placeholder='Enter Show Here' />
+            <button className="rounded-r-md appearance-none outline-0 h-10 bg-white py-0 px-3 cursor-pointer" onClick={handleSubmit} ><FcSearch size={25}/></button>
           </div>
         </div>
       )

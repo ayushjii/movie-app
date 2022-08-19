@@ -103,7 +103,7 @@ class Main extends React.Component {
     render() {
       let allShows = this.printShows();
       return (
-        <div className='h-16 flex flex-col'>
+        <div className='h-99 flex flex-col'>
           { this.state.showPopup && 
             <Showexpand
               closePop={this.shutPop}
@@ -133,7 +133,7 @@ class Main extends React.Component {
             getSubmit={this.fetchShows}
             sendEnter={this.fetchShows}
             />
-          <div className="show-grid">
+          <div className="grid gap-3 p-3 pb-12 show-grid">
             { allShows.length === 0 ? <div className='error'>No shows found... <i className="fas fa-film"></i></div> : allShows }
           </div>
         </div>

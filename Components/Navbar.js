@@ -9,14 +9,6 @@ export const Navabr = () => {
         <div className="float-right">
           <Link href="/home"><Image src={Logo} alt="" /></Link>
         </div>
-      <ul className="flex justify-center mx-4 my-1 items-center">
-        <li className="mx-4 my-1">
-          <Link href="/home">HOME</Link>
-        </li>
-        <li className="mx-4 my-1">
-          <Link href="/details">DETAILS</Link>
-        </li>
-      </ul>
     </nav>
   );
 };
