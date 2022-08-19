@@ -15,7 +15,7 @@ module.exports = {
         ad: "380px",
       },
       keyframes: {
-        pooh: {
+        poof: {
           "0%": { opacity: "0", transform: "translateY(-5px)}" },
           "100%": { opacity: "1", transform: "translateY(0px)" },
         },

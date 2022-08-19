@@ -3,6 +3,8 @@ import Show from "./Movie";
 import Search from "./SearchBar";
 import React from "react";
 import axios from "axios";
+import {FcFilmReel,FcFilm } from 'react-icons/fc';
+
 
 // https://via.placeholder.com/210x295/111217/FFFFFF/?text=No%20Image
 
@@ -102,29 +104,32 @@ class Main extends React.Component {
     
     render() {
       let allShows = this.printShows();
+ 
+      let allmove = this.state.curTvload.show;
+
       return (
         <div className='h-99 flex flex-col'>
           { this.state.showPopup && 
             <Showexpand
               closePop={this.shutPop}
-            name={this.state.curTvload.show.name}
+            name={allmove.name}
             imgLink={
-              this.state.curTvload.show.image == null ?
+              allmove.image == null ?
               '' : 
-              this.state.curTvload.show.image.original
+              allmove.image.original
             }
-            country={this.state.curTvload.show.network == null ?
-              '' : this.state.curTvload.show.network.country.name }
-            lang={this.state.curTvload.show.language}
-            genres={this.state.curTvload.show.genres.join(', ')}
-            plot={this.state.curTvload.show.summary}
-            network={this.state.curTvload.show.network == null ?
-              'N/A' : this.state.curTvload.show.network.name }
-            runtime={this.state.curTvload.show.runtime}
-            rating={this.state.curTvload.show.rating == null ?
-              'N/A' : this.state.curTvload.show.rating.average }
-            status={this.state.curTvload.show.status}
-            link={this.state.curTvload.show.url}
+            country={allmove.network == null ?
+              '' : allmove.network.country.name }
+            lang={allmove.language}
+            genres={allmove.genres.join(', ')}
+            plot={allmove.summary}
+            network={allmove.network == null ?
+              'N/A' : allmove.network.name }
+            runtime={allmove.runtime}
+            rating={allmove.rating == null ?
+              'N/A' : allmove.rating.average }
+            status={allmove.status}
+            link={allmove.url}
             />
           }
           
@@ -134,7 +139,7 @@ class Main extends React.Component {
             sendEnter={this.fetchShows}
             />
           <div className="grid gap-3 p-3 pb-12 show-grid">
-            { allShows.length === 0 ? <div className='error'>No shows found... <i className="fas fa-film"></i></div> : allShows }
+            { allShows.length === 0 ? <div className='error flex'><div><FcFilm size={30}/></div>No Show Found<div><FcFilmReel size={30}/></div></div> : allShows }
           </div>
         </div>
       )
