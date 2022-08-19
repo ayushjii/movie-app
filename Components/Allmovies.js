@@ -135,7 +135,7 @@ class Main extends React.Component {
             getSubmit={this.fetchShows}
             sendEnter={this.fetchShows}
             />
-          <div className="grid gap-3 p-3 pb-12 show-grid">
+          <div className="grid gap-3 p-3 pb-12 hel">
             { allShows.length === 0 ? <div className='error flex font-bold'><div><FcFilm size={30}/></div>No Show Found<div><FcFilmReel size={30}/></div></div> : allShows }
           </div>
         </div>

@@ -16,7 +16,7 @@ const Search = (props) => {
     }
   };
   return (
-    <div className="h-24 grid place-content-center">
+    <div className="h-24 my-12 grid place-content-center">
       <div className="flex transition bg">
         <input
           className="rounded-l-md appearance-none outline-0  h-14 bg-white py-0 px-3 min-w-ad focus:shadow-lg"

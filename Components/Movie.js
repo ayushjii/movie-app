@@ -7,7 +7,7 @@ const Show = (props) => {
 
   return (
     <div
-      className="animation animate-pooh shadow-md  rounded cursor-pointer flex flex-col overflow-hidden"
+      className="animation shadow-md mt-5 card bg-white rounded-xl relative cursor-pointer flex flex-col overflow-hidden hover:z-10"
       id={props.id}
       data-id={props.id}
       onClick={handleShowClick}

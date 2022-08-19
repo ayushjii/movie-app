@@ -3,7 +3,7 @@ import { MdLocalMovies } from "react-icons/md";
 
 import React from "react";
 
-export const Navabr = () => {
+export const Navbar = () => {
   return (
     <nav className="h-32 p-3 bg-black flex-row text-white justify-center flex items-center list-none">
       <div className="text-4xl ">
@@ -13,7 +13,7 @@ export const Navabr = () => {
           <MdLocalMovies />
         </div>
 
-        <Link href="/home">ENTERTAINMENT SHOW</Link>
+        <Link href="/">ENTERTAINMENT SHOW</Link>
         <div className="flex">
           {" "}
           <MdLocalMovies />

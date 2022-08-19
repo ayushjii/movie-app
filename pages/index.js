@@ -1,14 +1,16 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import React from "react";
+import Main from "../Components/Allmovies";
+import { Navbar } from "../Components/Navbar";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>My Tv-show App</title>
-        <meta name="keywords" content="webdev" />
+    <div >
+       <Head>
+        <title>Home</title>
       </Head>
-      <h1> heeek b wddJB</h1>
+      <Navbar />
+      <Main />
     </div>
   );
 }
